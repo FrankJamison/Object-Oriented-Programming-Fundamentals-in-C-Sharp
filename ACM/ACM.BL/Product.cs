@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    class Product
+    public class Product
     {
         public Product()
         {
@@ -23,28 +23,9 @@ namespace ACM.BL
         public string ProductName { get; set; }
 
         /// <summary>
-        /// Retrieve one product.
-        /// </summary>
-        /// <param name="productId"></param>
-        /// <returns></returns>
-        public Product Retrieve(int productId)
-        {
-            // Code that retrieves the defined product.
-
-            return new Product();
-        }
-
-        /// <summary>
-        /// Saves the current product.
+        /// Validates the product data.
         /// </summary>
         /// <returns></returns>
-        public bool Save()
-        {
-            // Code that saves defined product
-
-            return true;
-        }
-
         public bool Validate()
         {
             var isValid = true;

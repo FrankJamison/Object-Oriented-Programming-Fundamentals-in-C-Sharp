@@ -5,7 +5,7 @@ namespace ACM.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer() : this(0)
         {
             
         }
@@ -13,9 +13,13 @@ namespace ACM.BL
         public Customer(int customerId)
         {
             CustomerID = customerId;
+            AddressList = new List<Address>();
         }
 
+        public List<Address> AddressList { get; set; }
+
         public int CustomerID { get; private set; }
+        public int CustomerType { get; set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
 
@@ -60,28 +64,6 @@ namespace ACM.BL
             // Code that retrieves the defined customer.
 
             return new Customer();
-        }
-
-        /// <summary>
-        /// Retrieve all customers.
-        /// </summary>
-        /// <returns></returns>
-        public List<Customer> Retrieve()
-        {
-            // Code that retrieves a;ll of the customers.
-
-            return new List<Customer>();
-        }
-
-        /// <summary>
-        /// Saves the current customer.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // Code that saves the defined customer
-
-            return true;
         }
 
         /// <summary>
